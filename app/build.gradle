@@ -1,4 +1,8 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
 
 android {
     compileSdk 33
@@ -43,6 +47,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.0-alpha06'
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    // 如果使用Kotlin，添加kapt
+     kapt 'com.jakewharton:butterknife-compiler:10.2.3'
 
     implementation 'com.shuyu:GSYVideoPlayer:7.1.3'
 
